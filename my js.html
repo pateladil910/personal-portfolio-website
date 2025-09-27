@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First JS </title>
+</head>
+<body>
+    <h1>Welcome to JavaScript</h1>
+    <script src="script.js"></script>
+
+    <!-- Voting Eligibility-->
+     <h2>Check out for Voting Eligibility</h2>
+     <input type="number" id="age" placeholder="Enter age">
+     <button onclick="checkEligibility()">Check</button>
+     <p id="result"></p>
+
+     <script>
+        function checkEligibility() {
+            let age= document.getElementById("age").value;
+            let result="";
+                if(age>=18){
+                    result="You are Eligible to Vote";
+                }
+                else{
+                    result="sorry,You Are Note Eligible for Vote";
+                }
+                document.getElementById("result").innerText=result;
+        }    
+     </script>
+
+     <br>
+     <br>
+     <!--Login Validation-->
+     <h2>Login Validation</h2>
+     <input type="text" id="username" placeholder="Enter username"><br><br>
+     <input type="password" id="password" placeholder="Enter password"><br>
+     <br>
+     <button onclick="login()">Login</button>
+     <p id="message"></p>
+     <script>
+        function login(){
+            let user= document.getElementById("username").value;
+            let password= document.getElementById("password").value;
+
+            if(user=="ansh" && password=="1234")
+            {
+                document.getElementById("message").innerText="Login Successsfully";
+            }
+            else if(user=== " " || password=== " ")
+            {
+                document.getElementById("message").innerText="Invalid Username and Password"
+            }
+        }
+     </script>
+</body>
+</html>
